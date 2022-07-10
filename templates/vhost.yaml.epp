@@ -1,0 +1,10 @@
+<%- |
+   $root,
+| -%>
+
+<VirtualHost *:80>
+        #ServerName www.example.com
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/<%=  $root %>
+</VirtualHost>

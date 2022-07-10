@@ -1,0 +1,5 @@
+<%- |
+   $root,
+| -%>
+
+This is my idex.html from /var/www/<%=  $root %>
