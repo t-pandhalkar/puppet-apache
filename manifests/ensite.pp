@@ -1,4 +1,4 @@
-class apache::ensite (
+define apache::ensite (
   String $vhost_file = '000-default.conf',
 ) {
   if $facts['os']['family'] == "Debian" {
