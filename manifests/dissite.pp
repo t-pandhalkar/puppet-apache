@@ -1,4 +1,4 @@
-class apache::dissite (
+define apache::dissite (
   String $vhost_file = '000-default.conf',
 ) {
   if $facts['os']['family'] == "Debian" {
