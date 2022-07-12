@@ -1,7 +1,8 @@
 define apache::vhost (
   String[1] $root 
-)
-{
+){ 
+ notify {"Running vhost":}
+
  file {"/var/www/${root}":
     ensure => directory
  }
