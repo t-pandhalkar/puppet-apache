@@ -1,0 +1,11 @@
+{
+    "puppet_task_version": 1,
+    "supports_noop": false,
+    "description": "Run apachectl through puppet task",
+    "parameters": {
+      "action": {
+          "description": "actions",
+          "type": "Enum[start, stop, graceful, status]"
+      }
+    }   
+  }  
