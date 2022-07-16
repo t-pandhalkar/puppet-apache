@@ -1,13 +1,20 @@
 class apache::v_host(
   Array $sub_domains,
 ) {
-  $apache::sub_domains.each | String $sub_domain |{
+
+  notify {"Running v_host":}
+
+  $sub_domains.each | String $sub_domain |{
     apache::vhost {"$sub_domain":
       root => "$sub_domain"
     }
     apache::ensite {"$sub_domain":
       vhost_file => '000-default.conf',
-      require => Apache_Vhost["$sub_domain"]
+      require => Apache::Vhost["$sub_domain"]
+    } 
+    apache::dissite {"$sub_domain":
+      vhost_file => '000-default.conf',
+      require => Apache::Vhost["$sub_domain"]
     } 
   }  
 }
